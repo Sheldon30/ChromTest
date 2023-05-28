@@ -33,8 +33,8 @@ public class SeleniumTest {
     @Test
     void shouldOpenSite() throws InterruptedException {
         driver.get("http://localhost:9999/");
-        driver.findElement(By.cssSelector("[data-test-id='name']")).sendKeys("Александр");
-        driver.findElement(By.cssSelector("[data-test-id='phone']")).sendKeys("+79275896556");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Александр");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79275896556");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.tagName("button")).click();
         String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
